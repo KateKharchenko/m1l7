@@ -1,0 +1,165 @@
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/Proxima Nova Regular.otf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/Proxima Nova Extrabold.otf');
+	font-weight: 900;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-transition: all .25s linear;
+	   -moz-transition: all .25s linear;
+	    -ms-transition: all .25s linear;
+	     -o-transition: all .25s linear;
+	        transition: all .25s linear;
+}
+
+html, body {
+	min-height: 100%;
+	margin: 0;
+}
+	
+.editor {
+	height: 100%;
+	background-color: #464f54;
+	padding: 150px 70px 0;
+	position: relative;
+}
+
+.editor__area {
+	width: 100%;
+	height: 100%;
+	padding: 190px 130px 40px;
+	background-color: #fff;
+	box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.2);
+	position: relative;
+}
+
+.editor__area:before {
+	content: '';
+	display: block;
+	border-left: 2px solid #e8eced;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 70px;
+}
+
+.editor__author, 
+.editor__date,
+.editor__title,
+.editor__input label {
+	font-family: 'Proxima Nova', Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+.editor__author, 
+.editor__date {
+	font-size: 20px;
+	color: #b4b4b4;
+}
+
+.editor__title {
+	font-size: 77px;
+	color: #2a2a2a;
+	font-weight: 900;
+	margin: 50px 0 0;
+	line-height: 1.1;
+}
+
+.editor__author:after {
+	content: ',';
+}
+
+.editor__subtitle {
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 30px;
+	color: #8f8f8f;
+	font-style: italic;
+	font-weight: 400;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.editor__text {
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 27px;
+	color: #2a2a2a;
+	line-height: 1.5;
+}
+
+.editor__input {
+	padding: 40px 0 40px 55px;
+	background-color: #181818;
+	box-shadow: 5px 5px 60px 10px rgba(0, 0, 0, 0.15);
+}
+
+.editor__input label {
+	display: block;
+	font-size: 15px;
+	color: #b4b4b4;
+}
+
+.editor__input input {
+	display: block;
+	width: 100%;
+	color: #fff;
+	padding: 15px 55px 15px 5px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid #303030;
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 42px;
+}
+
+.editor__input input:focus {
+	outline: none;
+	border-color: #eeb62b;
+}
+
+.editor__toolbar {
+	background-color: #eeb62b;
+	padding: 10px 35px;
+	margin-left: 70px;
+	box-shadow: 5px 5px 60px 10px rgba(0, 0, 0, 0.15);
+}
+
+.editor__toolbar ul {
+	padding: 0;
+	margin: 0;
+}
+
+.editor__toolbar ul li {
+	display: inline-block;
+}
+
+.editor__toolbar ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: rgba(255,255,255, .6);
+	font-size: 26px;
+	padding: 10px;
+}
+
+.editor__toolbar ul li a:hover,
+.editor__toolbar ul li a:focus,
+.editor__toolbar ul li a:active,
+.editor__toolbar ul li a.active {
+	color: rgba(255,255,255, 1);
+}
+
+.editor__panel {
+	width: 70%;
+	position: absolute;
+	right: 0; top: 50px;
+	z-index: 10;
+}
